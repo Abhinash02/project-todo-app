@@ -14,7 +14,7 @@ function TodoList() {
 
   const fetchTodos = async () => {
     try {
-      const response = await axios.get('https://todo-apps-1ram.onrender.com');
+      const response = await axios.get('https://todo-backend-hthd.onrender.com/');
       setTodos(response.data);
       if (response.data.length === 0) {
         toast.info('No tasks yet. Well done! ✨', {

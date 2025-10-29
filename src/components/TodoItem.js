@@ -12,7 +12,7 @@ function TodoItem({ todo, onTodoUpdated, onTodoDeleted }) {
     const trimmedDescription = (editDescription || '').trim();
     if (trimmedTitle && trimmedDescription) {
       try {
-        const response = await axios.put(`https://todo-apps-1ram.onrender.com/${todo._id}`, {
+        const response = await axios.put(`https://todo-backend-hthd.onrender.com/${todo._id}`, {
           title: trimmedTitle,
           description: trimmedDescription,
         });
