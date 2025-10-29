@@ -12,7 +12,7 @@ function TodoItem({ todo, onTodoUpdated, onTodoDeleted }) {
     const trimmedDescription = (editDescription || '').trim();
     if (trimmedTitle && trimmedDescription) {
       try {
-        const response = await axios.put(`https://todo-backend-hthd.onrender.com/${todo._id}`, {
+        const response = await axios.put(`https://todo-backend-hthd.onrender.com/api/todos/${todo._id}`, {
           title: trimmedTitle,
           description: trimmedDescription,
         });
@@ -55,7 +55,7 @@ function TodoItem({ todo, onTodoUpdated, onTodoDeleted }) {
   const handleDelete = async () => {
     if (window.confirm('Are you sure you want to delete this task?')) {
       try {
-        await axios.delete(`http://localhost:5000/api/todos/${todo._id}`);
+        await axios.delete(`https://todo-backend-hthd.onrender.com/api/todos/${todo._id}`);
         if (onTodoDeleted) onTodoDeleted(todo._id);
         toast.success('Todo deleted successfully!', {
           position: 'top-right',

@@ -11,7 +11,7 @@ function AddTodo({ onTodoAdded }) {
     const trimmedDescription = (description || '').trim();
     if (trimmedTitle && trimmedDescription) {
       try {
-        const response = await axios.post('https://todo-backend-hthd.onrender.com/', { title: trimmedTitle, description: trimmedDescription });
+        const response = await axios.post('https://todo-backend-hthd.onrender.com/api/todos', { title: trimmedTitle, description: trimmedDescription });
         setTitle('');
         setDescription('');
         if (onTodoAdded) onTodoAdded(response.data);
