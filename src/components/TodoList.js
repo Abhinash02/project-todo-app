@@ -205,7 +205,7 @@ function TodoList() {
       <div className="bg-gray-50 border-2 border-gray-200 rounded-lg p-4 mb-6 text-center">
         <h3 className="text-xl font-semibold text-gray-800 mb-2">Welcome to Your Todo Page!</h3>
         <p className="text-gray-600">
-          Use this page to manage your tasks. Add, edit, or delete todos as needed. Notes: All tasks are saved and visible to everyone. Happy organizing! 📝
+          Use this page to manage your tasks. Add, edit, or delete todos as needed. Notes: All tasks are saved and visible to everyone. You have to reload the page after adding new todo. Happy organizing! 📝
         </p>
       </div>
 
